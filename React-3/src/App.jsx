@@ -1,13 +1,13 @@
-import { useContext } from "react"
-import { tasksContext } from "./Contexts/Context"
+import { useContext } from "react";
+import { todocontext, usercontext } from "./Contexts/TodoContext";
 
 const App = () => {
-  useContext(tasksContext)
-  return (
-    <div>
-      app
-    </div>
-  )
-}
+  const [tasks, setTasks] = useContext(todocontext);
+  const [user, setuser] = useContext(usercontext);
+  console.log(tasks);
+  console.log(user);
+  return;
+  <div></div>;
+};
 
-export default App
+export default App;
